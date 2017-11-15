@@ -1,0 +1,141 @@
+html, body {
+	padding: 0;
+  background: #222;
+	color: #FFF;
+	text-align: center;
+	font-family: sans-serif;
+	max-width: 500px;
+	margin: auto;
+}
+.video-container{
+	position: relative;
+}
+video {
+	display: block;
+	background: black;
+  width: 100%;
+  height: calc(100vw / 16 * 9);
+  margin: auto;
+}
+@media (min-width: 500px) {
+	video {
+		height: calc(500px / 16 * 9)
+	}
+}
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
+figure {
+	width: 100%;
+}
+.button{
+	padding: 10px;
+}
+.play{
+	border: 1px solid white;
+	border-radius: 5px ;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	float: left;
+	/*background: black;*/
+	background: url("./play.png") no-repeat 2px 2px;
+	background-size: 25px 25px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+}
+.play_active{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: url("./play.png") no-repeat 2px 2px;
+	background-size: 25px 25px;
+	border: 1px solid white;
+	border-radius: 5px ;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	float: left;
+	outline: none;
+}
+.play_pause{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: url("./pause.png") no-repeat left 2px;
+	background-size: 25px 25px;
+	border: 1px solid white;
+	border-radius: 5px ;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	float: left;
+	outline: none;
+}
+/*.play {*/
+	/*!*background: red;*!*/
+	/*position: absolute;*/
+	/*left: 50%;*/
+	/*top: 50%;*/
+	/*transform: translate(-50%,-50%);*/
+	/*border: none;*/
+	/*-moz-appearance: none;*/
+	/*-webkit-appearance: none;*/
+	/*float: left;*/
+/*}*/
+/*.play_active{*/
+	/*position: relative;*/
+	/*left: 0;*/
+	/*bottom: 0;*/
+	/*display: block;*/
+/*}*/
+
+
+/*.play span{*/
+	/*display: block;*/
+	/*border-bottom: 30px solid transparent;*/
+	/*border-top: 30px solid transparent;*/
+	/*border-left: 25px solid white;*/
+/*}*/
+.fullscreen {
+	float: right;
+	border: 1px solid white;
+	border-radius: 5px ;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url("./full_screen.png") no-repeat left 2px;
+	background-size: 25px 25px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+}
+.threejs-notice {
+
+}
+.threejs-notice a {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+h2 {
+	margin: 1em 0;
+}
+p {
+	line-height: 25px;
+	font-size: 0.75em;
+	margin: 0 0 1em;
+}
+a {
+	color: #FFF;
+}
+code {
+	font-size: 1.2em;
+}
+h2 span {
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+}
