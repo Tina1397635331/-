@@ -1,0 +1,557 @@
+body{
+    background: rgba(100,100,100,.6);
+}
+
+
+
+.info_mask{
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    width: 100%;
+    height: 100%;
+    /*background: rgba(100,100,100,.6);*/
+}
+.info_mask .mask_content{
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%,-50%);*/
+    width: 740px;
+    background: white;
+    /*height: 600px;*/
+    /*overflow-y: scroll;*/
+    margin: 30px auto;
+
+}
+.info_mask .mask_content .mask_head{
+    background: #E40177;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.info_mask .mask_content .mask_head>div{
+    font-size: 14px;
+    color: white;
+    font-family: "微软雅黑";
+}
+/*content*/
+.info_mask .mask_content .mask_box{
+    /*margin-top: 30px;*/
+    padding: 5px;
+}
+.info_mask .mask_content .mask_box .change_card{
+    background: #FCFFE0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/*.change_card*/
+.mask_box .change_card .change_title{
+    font-size: 18px;
+    color: #D90A6B;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.mask_box .change_card .select_change{
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 0;
+}
+.mask_box .change_card .select_change>div:first-child{
+    font-size: 14px;
+    color: #65655C;
+    font-family: "微软雅黑";
+}
+.mask_box .change_card .select_change>div:nth-child(2){
+    font-size: 12px;
+    color: #6D6E5C;
+    font-family: "微软雅黑";
+    margin-right: 5px ;
+}
+/*.mask_box .change_card .select_change>div:nth-child(2) input{*/
+    /*margin-top: 7px;*/
+/*}*/
+.mask_box .change_card .select_change>div:nth-child(3){
+    font-size: 12px;
+    color: #6D6E5C;
+    font-family: "微软雅黑";
+    margin-right: 5px ;
+}
+.mask_box .change_card .select_change>div:last-child{
+    font-size: 12px;
+    color: #7C7D6E;
+    font-family: "微软雅黑";
+}
+.mask_box .change_card .change_sure{
+    text-align: right;
+}
+.mask_box .change_card .change_sure span{
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-family: "微软雅黑";
+    background: #8FC320;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*activity_box*/
+.mask_box .activity_box{
+    margin-top: 10px;
+    background: #FCFFE0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.mask_box .activity_box .activity_1{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
+.mask_box .activity_box .activity_1>div:first-child{
+    width: 20px;
+    height: 22px;
+    background: url("../images/comment1.png") no-repeat left 2px;
+    background-size: 20px 20px;
+    margin-right: 10px;
+}
+.mask_box .activity_box .activity_1>div:last-child{
+    font-size: 16px;
+    color: #0592DA;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    margin-top: 2px;
+    line-height: 20px;
+}
+.mask_box .activity_box .combo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+}
+.mask_box .activity_box .combo>div{
+    display: flex;
+    justify-content: flex-start;
+}
+.mask_box .activity_box .combo>div:first-child{
+    margin-right: 10px;
+}
+.mask_box .activity_box .combo>div:first-child>span:first-child{
+    font-size: 14px;
+    color: #73736D;
+    font-family: "宋体";
+}
+.mask_box .activity_box .combo>div:first-child>span:last-child{
+    font-size: 14px;
+    color: #DD0A79;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.mask_box .activity_box .combo>div>div.combo_{
+    font-size: 14px;
+    color: #666464;
+    font-family: "微软雅黑";
+}
+.mask_box .activity_box .combo>div:last-child>div:last-child{
+    font-size: 14px;
+    color: #DD0A79;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.mask_box .activity_box .enter_order{
+    text-align: center;
+    padding: 3px 0;
+    margin-top: 10px;
+}
+.mask_box .activity_box .enter_order a{
+    display: inline-block;
+    display: inline-block;
+    padding: 5px 30px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-family: "微软雅黑";
+    background: #8FC320;
+    border-radius: 5px;
+}
+/*select_combo*/
+.mask_box .select_combo .combo_name{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #D7D7D7;
+}
+.mask_box .select_combo .combo_name>div{
+    width: 120px;
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    padding: 10px 0;
+    background: #E1E1E1;
+    font-size: 14px;
+    color: #686868;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+.mask_box .select_combo .combo_name>div:first-child{
+    margin-right: 20px;
+}
+.mask_box .select_combo .combo_name>div.active{
+    background: white;
+    border: 1px solid #D7D7D7;
+    border-bottom: 0;
+    /*padding-bottom: 2px;*/
+}
+.mask_box .select_combo .combo_content{
+    display: none;
+}
+.mask_box .select_combo .combo_name>div:first-child{
+    margin-left: 20px;
+}
+.mask_box .select_combo .combo_content .combo_select_tilte{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.mask_box .select_combo .combo_content .combo_select_tilte>div{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    position: relative;
+}
+.mask_box .select_combo .combo_content .combo_select_tilte>div{
+    background: #E1E1E1;
+    font-size: 14px;
+    color: #626262;
+    font-family: "微软雅黑";
+    text-align: center;
+    margin-right: 30px;
+
+}
+.mask_box .select_combo .combo_content .combo_select_tilte>div span{
+    display: none;
+}
+.mask_box .select_combo .combo_content .combo_select_tilte>div.active{
+    background: #E40177;
+    font-size: 14px;
+    color: white;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+.mask_box .select_combo .combo_content .combo_select_tilte>div.active span{
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 20px;
+    height: 15px;
+    background: url("../images/icon.png") no-repeat left top;
+    background-size: 20px 15px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 20px;
+    border: 1px solid #E40074;
+    width: 150px;
+    border-radius: 5px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo>div:first-child{
+    width: 48px;
+    height: 38px;
+    background: #E40074;
+    border-radius: 2px 0 0 2px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo>div:first-child span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("../images/4G.png") no-repeat 10px 5px;
+    background-size: 30px 30px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo.one>div:first-child{
+    width: 48px;
+    height: 38px;
+    background: #E40074;
+    border-radius: 2px 0 0 2px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo.one>div:first-child span{
+    display: inline-block;
+    width: 40px;
+    height: 38px;
+    background: url("../images/up_down.png") no-repeat 10px 5px;
+    background-size: 30px 30px;
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo>div:last-child{
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    color:  #E40177;
+    font-family: "微软雅黑";
+
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .G_combo.one>div:last-child{
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    color:  #E40177;
+    font-family: "微软雅黑";
+    /*text-align: center;*/
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .combo_express{
+    font-size: 14px;
+    color:  #707070;
+    font-family: "微软雅黑";
+}
+.mask_box .select_combo .combo_content .select_box .combo-title .combo_express.one{
+    font-size: 10px;
+    color:  #707070;
+    font-family: "微软雅黑";
+    line-height: 20px;
+}
+.mask_box .select_combo .combo_content .select_box .combo_select{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.mask_box .select_combo .combo_content .select_box .combo_select .num_country{
+    width: 46%;
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+    text-align: center;
+    /*margin-right: 20px;*/
+}
+.mask_box .select_combo .combo_content .select_box .combo_select.one .num_country{
+    width: 30%;
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+    text-align: center;
+    /*margin-right: 20px;*/
+}
+.mask_box .select_combo .combo_content .select_box .combo_select .num_country{
+    font-size: 14px;
+    color:  #5d5d5d;
+    font-family: "微软雅黑";
+}
+.mask_box .select_combo .combo_content .select_box .combo_select .num_country .sel_num{
+    font-size: 14px;
+    color:  #3CA1DC;
+    font-family: "微软雅黑";
+}
+.mask_box .select_combo .combo_content .select_box .combo_select .num_country .sel_price{
+    font-size: 14px;
+    color: #F00164;
+    font-family: "微软雅黑";
+}
+.mask_box .select_combo .combo_content .select_box .combo_select .num_country.active{
+    background: url("../images/select.png") no-repeat right bottom;
+    background-size: 15px 15px;
+    border-color: #3CA1DC;
+}
+.mask_box .select_combo .combo_content .select_box .combo_sure{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.mask_box .select_combo .combo_content .select_box .combo_sure>div:first-child{
+    font-size: 16px;
+    color: #6D6D6D;
+    font-family: "微软雅黑";
+    margin-right: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+.mask_box .select_combo .combo_content .select_box .combo_sure>div:first-child span{
+    font-size: 22px;
+    color:  #F00164;
+    font-family: "微软雅黑";
+}
+.mask_box .select_combo .combo_content .select_box .combo_sure>div:last-child{
+    font-size: 18px;
+    color:  white;
+    font-family: "微软雅黑";
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    text-align: center;
+    background: #8FC320;
+    cursor: pointer;
+}
+.mask_box .select_combo .combo_content .select_box .combo_offer{
+    text-align: right;
+    font-size: 12px;
+    color:  #40B5F5;
+    font-family: "微软雅黑";
+    margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+.mask_box .select_combo .combo_content .select_box{
+    display: none;
+}
+
+
+/*else_combo*/
+.mask_box .else_combo{
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px dashed #606060;
+}
+.mask_box .else_combo dl dt{
+    display: flex;
+    justify-content: flex-start;
+}
+.mask_box .else_combo dl dt>div:first-child{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #616161;
+    margin-top: 6px;
+    margin-right: 5px;
+}
+.mask_box .else_combo dl dt>div:last-child{
+    font-size: 14px;
+    color:  #666666;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
+.mask_box .else_combo dl dd{
+    font-size: 12px;
+    color:  #787878;
+    font-family: "微软雅黑";
+    text-indent: 2em;
+    line-height: 20px;
+}
+
+
+
+
+
+/*自选套餐*/
+.combo_selects.first .combo_justify{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.combo_selects.first .combo_justify .combo_left{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.combo_selects.first .combo_justify .combo_left.one{
+    background: #0094da;
+}
+.combo_selects.first .combo_justify .combo_left.two{
+    background: #8fc320;
+}
+.combo_selects.first .combo_justify .combo_left.three{
+    background: #e40077;
+}
+.combo_selects.first .combo_justify .combo_left.one>div:first-child{
+    width: 50px;
+    height: 28px;
+    background: url("../images/tel.png") no-repeat center 3px;
+    background-size: 30px 28px;
+}
+.combo_selects.first .combo_justify .combo_left.two>div:first-child{
+    width: 50px;
+    height: 29px;
+    background: url("../images/up_down.png") no-repeat center 5px;
+    background-size: 30px 25px;
+}
+.combo_selects.first .combo_justify .combo_left.three>div:first-child{
+    width: 50px;
+    height: 28px;
+    background: url("../images/buy.png") no-repeat center 7px;
+    background-size: 30px 25px;
+}
+.combo_selects.first .combo_justify .combo_left>div:last-child{
+    width: 100px;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    font-family: "微软雅黑";
+}
+
+.combo_selects.first .combo_justify .combo_right{
+    flex: 1;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+.combo_selects.first .combo_justify .combo_right>div{
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+    width: 22%;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #cacaca;
+    font-family: "微软雅黑";
+}
+
+.combo_selects.first .combo_justify .combo_right.one>div.active{
+    border-color: #0085d0;
+    background: url("../images/select.png") no-repeat right bottom;
+    background-size: 15px 15px;
+    color: #0085d0;
+}
+.combo_selects.first .combo_justify .combo_right.two>div.active{
+    border-color: #8fc320;
+    background: url("../images/select2.png") no-repeat right bottom;
+    background-size: 15px 15px;
+    color: #8fc320;
+}
+.combo_selects.first .combo_justify .combo_right.three>div.active{
+    border-color: #e40077;
+    background: url("../images/select3.png") no-repeat right bottom;
+    background-size: 15px 15px;
+    color: #e40077;
+}
+
+
+
+
+
+
