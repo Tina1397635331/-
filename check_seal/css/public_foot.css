@@ -1,0 +1,73 @@
+/*footer*/
+#foot_nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: .05rem .1rem;
+    background: white;
+
+}
+#foot_nav>a{
+    display: block;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+}
+#foot_nav>a>div:first-child{
+    width: .287rem;
+    height: .27rem;
+    margin: .05rem auto 0;
+}
+#foot_nav>a>div:last-child{
+    width: .46rem;
+    height: .16rem;
+    line-height: .16rem;
+    font-size: .12rem;
+    color: #9D9C9C;
+    font-family: "Adobe Heiti Std R";
+    margin: .05rem auto;
+    text-align: center;
+}
+#foot_nav>a.active>div:last-child{
+    font-family:Adobe Heiti Std R;
+    color:rgba(45,158,255,1);
+    font-size: .12rem;
+    margin: .05rem auto;
+    text-align: center;
+}
+#foot_nav a:first-child>div:first-child{
+    background: url("../images/foot1.png") no-repeat left top;
+    background-size: .28rem .28rem;
+}
+#foot_nav a:nth-child(2)>div:first-child{
+    background: url("../images/foot_nav (3).png") no-repeat left top;
+    background-size: .26rem .26rem;
+}
+#foot_nav a:nth-child(3)>div:first-child{
+    background: url("../images/foot_nav (4).png") no-repeat left top;
+    background-size: .26rem .26rem;
+}
+#foot_nav a:last-child>div:first-child{
+    background: url("../images/foot_nav (2).png") no-repeat left top;
+    background-size: .28rem .28rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

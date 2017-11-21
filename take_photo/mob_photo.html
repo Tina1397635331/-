@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            border: 1px solid #efefef;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        div>a{
+            margin-right: 10px;
+            margin-bottom: 10px;
+            height: 30px;
+            line-height: 30px;
+        }
+        /*a  upload */
+        .a-upload {
+            padding: 4px 10px;
+            position: relative;
+            cursor: pointer;
+            color: #888;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            display: block;
+            *display: inline;
+            *zoom: 1;
+            text-decoration: none;
+        }
+
+        .a-upload  input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            cursor: pointer
+        }
+
+        .a-upload:hover {
+            color: #444;
+            background: #eee;
+            border-color: #ccc;
+            text-decoration: none
+        }
+
+        .file {
+            position: relative;
+            display: block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+
+
+
+
+        .upload {
+            position: relative;
+            display: block;
+            background: #FFFFFF;
+            border: 1px solid #E5F6FE;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: blue;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .upload input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .upload:hover {
+            background: #FFFFA3;
+            border-color: #F9F9F9;
+            color: #f32600;
+            text-decoration: none;
+        }
+
+        .camera {
+            position: relative;
+            display: block;
+            background: darkcyan;
+            border: 1px solid darkgray;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: black;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .camera input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .camera:hover {
+            background: cadetblue;
+            border-color: cadetblue;
+            color: white;
+            text-decoration: none;
+        }
+
+        .video {
+            position: relative;
+            display:block;
+            background: cornsilk;
+            border: 1px solid cornsilk;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: cadetblue;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .video input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .video:hover {
+            background: coral;
+            border-color: chocolate;
+            color: cornsilk;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="javascript:;" class="a-upload">
+        <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">点击上传图片
+    </a>
+    <!--直接调用照相机-->
+    <!--<input type="file" capture="camera" accept="image/*" id="cameraInputs" name="cameraInput">-->
+    <!--调用相册-->
+    <a href="#"  class="upload">上传图片
+        <input type="file" name="file" accept="image/*" >
+    </a>
+
+    <!--调用相册-->
+    <a href="#" class="camera">上传图片
+        <input type="file" name="file"  capture="camera">
+    </a>
+
+    <!--调用摄影机录像-->
+    <a href="#" class="video">点击录像
+        <input type="file" capture="user" accept="video/*" multiple="">
+    </a>
+
+    <!--调用录音机录音-->
+    <!--<a href="#" class="audio">-->
+        <!--<input type="file" accept="audio/*" capture="microphone">-->
+    <!--</a>-->
+
+
+    <a href="javascript:;" class="file">开始录音
+        <input type="file" accept="audio/*" capture="microphone">
+    </a>
+
+    <!--调用手机的拍照功能和直接打开系统文件目录。-->
+    <!--<input type="file" accept="image/*" capture="camera">-->
+    <!--调用手机的录像功能和直接打开系统文件目录。-->
+    <!--<input type="file" accept="video/*" capture="camcorder">-->
+    <!--调用手机的录像功能和直接打开系统文件目录。苹果手机调出来的是拍照和录像安卓手机调出来的录音功能-->
+    <!--<input type="file" accept="audio/*" capture="microphone">-->
+    <!--nput:file标签还支持一个multiple属性，表示可以支持多选,capture就没啥用了，因为multiple是专门用来支持多选的。-->
+    <!--<input type="file" accept="audio/*" multiple>-->
+    <!--上传文件-->
+    <!--<input type="file" name="">-->
+</div>
+<script src="./js/jquery-1.8.2.min.js"></script>
+<script>
+    $(function () {
+        $(".a-upload").on("change","input[type='file']",function(){
+            var filePath=$(this).val();
+            if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1){
+                $(".fileerrorTip").html("").hide();
+                var arr=filePath.split('\\');
+                var fileName=arr[arr.length-1];
+                $(".showFileName").html(fileName);
+            }else{
+                $(".showFileName").html("");
+                $(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
+                return false
+            }
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+
+
+/*头部start*/
+#head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: .1rem .1rem .1rem .15rem;
+    display: flex;
+    justify-content: space-between;
+}
+#head>div:first-child{
+    width: .25rem;
+    height: .37rem;
+    background: url("../images/pre.png") no-repeat left .075rem;
+    background-size: .22rem .22rem;
+}
+#head>div:nth-child(2){
+    height:.37rem;
+    line-height: .37rem;
+    font-size:.19rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(38,25,21,1);
+}
+#head>div:last-child{
+    height:.37rem;
+    line-height: .37rem;
+}
+#head>div:last-child a{
+    font-size:.14rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(45,158,255,1);
+}
+/*主体内容*/
+#content{
+    background: #f6f6f6;
+    padding: .62rem .05rem .66rem .05rem;
+}
+.infract_num{
+    padding-left: .05rem;
+    height: .25rem;
+    line-height: .25rem;
+    font-size: .13rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(67,74,84,1);
+}
+.infract_num span{
+    color: rgba(255,102,107,1);
+}
+/*违章信息*/
+.inf_box{
+    margin-top: .1rem;
+    background: white;
+    border-radius: .05rem;
+    padding: .15rem .16rem .16rem .1rem;
+    box-shadow: 0 0 .02rem #ebebeb,
+                 0 0 .03rem #eeeeee;
+}
+.inf_box .inf_occur{
+    display: flex;
+    justify-content: space-between;
+}
+.inf_box .inf_occur .occur_left{
+    display: flex;
+    justify-content: flex-start;
+}
+.inf_box .inf_occur .occur_left>div:first-child{
+    height: .29rem;
+    font-size: .15rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(123,123,123,1);
+    line-height: .29rem;
+    margin-right: .1rem;
+}
+.inf_box .inf_occur .occur_left>div:last-child{
+    margin-top: .05rem;
+    background: #ff666b;
+    width:.55rem;
+    height: .2rem;
+    font-size: .12rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    line-height: .2rem;
+    border-radius: .15rem;
+    text-align: center;
+}
+.inf_box .inf_occur .occur_right{
+    height: .3rem;
+    line-height:.3rem;
+}
+.inf_box .inf_occur .occur_right a{
+    font-size:.16rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(45,158,255,1);
+}
+.inf_action{
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem 0;
+}
+.inf_action.one{
+    border-bottom: .01rem solid #e3e3e3;
+}
+.inf_action.two{
+    padding: .1rem 0 0 0;
+}
+.inf_action .action_left{
+    height: .27rem;
+    font-size: .14rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(123,123,123,1);
+    line-height: .27rem;
+}
+.inf_action .action_right{
+    height: .27rem;
+    font-size: .14rem;
+    font-family: PingFangSC-Regular;
+    color: rgba(67,74,84,1);
+    line-height: .27rem;
+}
+
+
+/*底部按钮*/
+.foot{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem .1rem .12rem .1rem;
+}
+.foot .foot_left{
+    width: 40%;
+    border-radius: .25rem;
+    background: #2d9eff;
+    text-align: center;
+    height:.44rem;
+    line-height:.44rem;
+    box-shadow: 0 .02rem #b1d8f9,
+0 .025rem #b2d8f9,
+0 .03rem .03rem #cfe5f8;
+}
+.foot .foot_left a{
+    font-size:.18rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+}
+.foot .foot_right{
+    width: 50%;
+    border-radius: .25rem;
+    background: #ff666b;
+    text-align: center;
+    height:.44rem;
+    line-height:.44rem;
+    font-size: .18rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(255,255,255,1);
+    box-shadow: 0 .02rem #e4c2cc,
+    0 .025rem #e7cbd4,
+    0 .03rem .03rem #ecdfe5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

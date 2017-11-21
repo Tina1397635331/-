@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--ie使用edge渲染模式-->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <meta name="renderer" content="webkit"><!--360渲染模式-->
+    <meta name="format-detection" content="telephone=notelphone=no, email=no"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="apple-touch-fullscreen" content="yes"/><!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- 设置苹果工具栏颜色:默认值为 default，可以定为 black和 black-translucent-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><!-- 不让百度转码 -->
+    <meta name="HandheldFriendly" content="true"><!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="MobileOptimized" content="320"><!-- 微软的老式浏览器 -->
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+    <meta name="browsermode" content="application"><!-- UC应用模式 -->
+    <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
+    <meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
+    <link rel="stylesheet" href="../css/public.css">
+    <title>add_car</title>
+</head>
+<body>
+<!--头部-->
+<div id="head">
+    <div></div>
+    <div>添加车辆</div>
+    <div></div>
+</div>
+<!--主体内容-->
+<div id="content">
+    <div class="tab">
+        <div class="menu">
+            <div class="active">方式一</div>
+            <div>方式二</div>
+        </div>
+        <div class="content" style="display: block;">
+            <div class="car_info">
+                <div class="car_num">
+                    <div class="car_left">桂A</div>
+                    <div class="car_in"><input type="text" placeholder="请输入车牌"></div>
+                </div>
+                <div class="car_num">
+                    <div class="car_left">手机号</div>
+                    <div class="car_in"><input type="text" placeholder="请输入预留手机号"></div>
+                    <div class="car_code">获取验证码</div>
+                </div>
+            </div>
+            <div class="car_prompt">此手机号为车管所预留手机号 如不对请及时更换</div>
+            <div class="car_num">
+                <div class="car_left">验证码</div>
+                <div class="car_in"><input type="text" placeholder="请输入验证码"></div>
+            </div>
+            <div class="sure_add">
+                确定添加
+            </div>
+            <div class="info_secrecy">您的信息我们将进行保密，请放心填写</div>
+        </div>
+        <div class="content">内容二</div>
+    </div>
+</div>
+<script type="text/javascript">
+    var menu = document.getElementsByClassName('menu')[0];
+    var aDiv = menu.getElementsByTagName('div');
+
+    var content = document.getElementsByClassName('content');
+
+    for (var i = 0; i < aDiv.length; i++) {
+        // console.log(aDiv[i]);
+        aDiv[i].index = i;
+        aDiv[i].onclick = function(){
+            for (var j = 0; j <aDiv.length; j++) {
+                // 去除所有选项的active 类名
+                aDiv[j].className = '';
+                // 把所有的内容区域都先隐藏
+                content[j].style.display = 'none';
+            }
+
+            this.className = 'active';
+
+            console.log(this.index);
+
+            content[this.index].style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>

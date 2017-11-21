@@ -1,0 +1,418 @@
+@charset "utf-8";
+
+
+#content{
+    background: #fff;
+    padding-bottom: .63rem;
+}
+
+
+/*轮播图*/
+.js-silder{
+    position: relative;
+    /*min-width: 320px;*/
+    /*height: 3rem;*/
+}
+.silder-scroll{
+    width: 100%;
+    overflow: hidden;
+}
+.silder-main{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.silder-main-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.silder-main-img img{
+    width: 100%;
+}
+.js-silder-ctrl{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: -.2rem;
+    z-index:2;
+}
+.silder-ctrl-prev,
+.silder-ctrl-next{
+    position: absolute;
+    top: 0;
+    width: 8%;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    font-family: "宋体";
+    font-size: .52rem;
+    font-weight: 600;
+    text-shadow: #666 .02rem .02rem .05rem;
+}
+.silder-ctrl-prev{
+    left: 0;
+    text-align: left;
+}
+.silder-ctrl-next{
+    right: 0;
+    text-align: right;
+}
+.silder-ctrl-prev>span,
+.silder-ctrl-next>span{
+    position: absolute;
+    top: 50%;
+    margin-top: -.8rem;
+}
+.silder-ctrl-prev>span{
+    left: 0;
+}
+.silder-ctrl-next>span{
+    right: 0;
+}
+.silder-ctrl-con{
+    display: inline-block;
+    width: 4%;
+    padding: .1rem 0;
+    margin: 0 .1rem;
+    cursor: pointer;
+}
+.silder-ctrl-con>span{
+    display: block;
+    line-height: 0;
+    text-indent: -99.99rem;
+    overflow: hidden;
+    padding: .05rem 0;
+    cursor: pointer;
+    background-color: #e4e4e4;
+}
+.silder-ctrl-con.active>span{
+    background-color: #7bbedf;
+}
+
+@media (max-width: 768px){
+    .silder-ctrl-prev,
+    .silder-ctrl-next{
+        width: 10%;
+        font-size: .26rem;
+        margin-top: -.25rem;
+    }
+    .silder-ctrl-con{
+        width: 1.14rem;
+        height: .14rem;
+        padding: 0;
+        margin: 0 5.05rem;
+    }
+    .silder-ctrl-con>span{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding: 0;
+    }
+}
+/*头部导航*/
+#head{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: .05rem .1rem;
+    position: relative;
+    margin-top: .1rem;
+}
+#head a{
+    display: block;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+#head a>div:first-child{
+    width: .47rem;
+    height: .47rem;
+    margin: 0 auto;
+}
+#head a>div:last-child{
+    /*width: .64rem;*/
+    height: .15rem;
+    line-height:  .15rem;
+    font-size: .12rem;
+    color: #4F4F4F;
+    font-family: "PingFangSC-Medium";
+    margin: .1rem auto;
+    text-align: center;
+
+}
+#head a:first-child>div:first-child{
+    background: url("../images/nav (1).png") no-repeat left top;
+    background-size: .47rem .47rem;
+}
+#head a:nth-child(2)>div:first-child{
+    background: url("../images/nav (2).png") no-repeat left top;
+    background-size: .47rem .47rem;
+}
+#head a:nth-child(3)>div:first-child{
+    background: url("../images/nav (3).png") no-repeat left top;
+    background-size: .47rem .47rem;
+}
+#head a:nth-child(4)>div:first-child{
+    background: url("../images/nav (4).png") no-repeat left top;
+    background-size: .47rem .47rem;
+}
+#head a:last-child>div:first-child{
+    background: url("../images/nav (2).png") no-repeat left top;
+    background-size: .47rem .47rem;
+}
+
+/*查违章*/
+.check_box{
+    background: #efefef;
+    padding: .1rem 0;
+    position: relative;
+}
+.check_box .check_bg{
+    background: white;
+    padding: .2rem 0;
+}
+/*刚进去的样式*/
+.check_box .add_show{
+    /*display: none;*/
+}
+.check_box .add_car{
+    width: 90%;
+    margin: 0 auto;
+    background: #2d9eff;
+    border-radius: .05rem;
+    height: .66rem;
+    line-height: .66rem;
+    display: flex;
+    justify-content: center;
+
+}
+.check_box .add_car>div:first-child{
+    width: .32rem;
+    height: .32rem;
+    background: url("../images/add_car (1).png") no-repeat left top;
+    background-size: .32rem .32rem;
+    margin-top: .17rem;
+    margin-right: .1rem;
+}
+.check_box .add_car>div:last-child{
+    font-size:.18rem;
+    font-family:PingFangSC-Medium;
+    color:rgba(255,255,255,1);
+}
+
+
+
+
+/*登录后的样式*/
+.check_box .check_show{
+    display: none;
+}
+.check_box .check_{
+    display: flex;
+    justify-content: center;
+
+}
+.check_box .check_>div:first-child{
+    font-size: .24rem;
+    font-family: "PingFangSC-Medium";
+    color: #494949;
+    margin-right: .1rem;
+    margin-top: .075rem;
+}
+.check_box .check_>div:last-child{
+    width: 1rem;
+    text-align: center;
+    padding: .1rem;
+}
+.check_box .check_>div:last-child a{
+    display: block;
+    border-radius: .15rem;
+    /*border: .01rem solid red;*/
+    font-family: "PingFangSC-Medium";
+    background: #FF666B;
+    box-shadow: 0 0 .025rem #ff6661,
+0 0 .035rem #efefef;
+    color: white;
+    font-size:.15rem;
+    padding: .05rem 0;
+}
+
+
+
+
+
+/*汽车资讯*/
+.car_info{
+    padding: .1rem 0;
+    position: relative;
+}
+.car_info .car_head{
+    padding-left: .1rem;
+    border-left: .02rem solid #5FBDFB;
+    font-size:.15rem;
+    font-family: "PingFangSC-Medium";
+    color: #595959;
+}
+.car_info .car_box{
+    margin-top: .2rem;
+    padding: 0 .1rem;
+    display: block;
+}
+.car_info .car_box .car_title{
+    font-size:.15rem;
+    font-family: "PingFang SC";
+    color: #3B3B3B;
+}
+.car_info .car_box .car_show{
+    display: flex;
+    justify-content: space-between;
+    margin-top: .13rem;
+}
+.car_info .car_box .car_show>div{
+    width: 30%;
+    height: 1rem;
+}
+.car_info .car_box .car_show>div img{
+    width: 100%;
+    height: 1rem;
+    vertical-align: middle;
+}
+
+/*foot*/
+#foot_nav a:first-child>div:first-child{
+    background: url("../images/foot_nav (1).png") no-repeat left top;
+    background-size: 28px 28px;
+}
+/*弹出层*/
+#login_mask{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 50;
+    background: rgba(99,99,99,.4);
+}
+#login_mask .login_box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-radius: .05rem;
+    padding: .1rem;
+    width: 75%;
+    text-align: center;
+}
+#login_mask .login_box .login_logo{
+    text-align: center;
+    margin-top: .1rem;
+}
+#login_mask .login_box .login_logo img{
+    width: .5rem;
+    height: .5rem;
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
+}
+#login_mask .login_box .login_logo span{
+    margin-top: .1rem;
+    height: .25rem;
+    font-size: .13rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(148,148,148,1);
+    line-height: .25rem;
+}
+#login_mask .login_box .login_style{
+    display: flex;
+    justify-content: flex-start;
+    width: 1.5rem;
+    border: .01rem solid #a2a2a2;
+    border-radius: .2rem;
+    margin: .1rem auto 0;
+    padding: .05rem .1rem;
+}
+#login_mask .login_box .login_style>div:first-child{
+    width: .2rem;
+    height: .26rem;
+    line-height: .26rem;
+}
+#login_mask .login_box .login_style>div:last-child{
+    text-align: center;
+    flex: 1;
+    height: .26rem;
+    font-size: .14rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(59,59,59,1);
+    line-height: .26rem;
+}
+#login_mask .login_box .login_style.one>div:first-child{
+    background: url("../images/weixin (1).png") no-repeat left .03rem;
+    background-size: .2rem .2rem;
+}
+#login_mask .login_box .login_style.two>div:first-child{
+    background: url("../images/qq.png") no-repeat left .03rem;
+    background-size: .2rem .2rem;
+}
+#login_mask .login_box .login_style.three>div:first-child{
+    background: url("../images/mobeil (1).png") no-repeat left .03rem;
+    background-size: .2rem .2rem;
+}
+#login_mask .login_box .login_pact{
+    text-align: center;
+    height:.23rem;
+    line-height: .23rem;
+    font-size: .12rem;
+    font-family:PingFangSC-Medium;
+    color:rgba(159,159,159,1);
+    margin: .3rem auto 0;
+}
+#login_mask .login_box .login_pact a{
+    color: #757373;
+}
+#login_mask .login_box .close{
+    position: absolute;
+    right: .05rem;
+    top: .05rem;
+    width: .25rem;
+    height: .26rem;
+    background: url("../images/close (2).png") no-repeat left top;
+    background-size: .25rem .26rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
