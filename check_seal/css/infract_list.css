@@ -39,9 +39,10 @@
 /*主体内容*/
 #content{
     background: #f6f6f6;
-    padding: .62rem .05rem .66rem .05rem;
+    padding: .57rem .05rem .76rem .05rem;
 }
 .infract_num{
+    padding-top: .05rem;
     padding-left: .05rem;
     height: .25rem;
     line-height: .25rem;
@@ -143,9 +144,9 @@
     text-align: center;
     height:.44rem;
     line-height:.44rem;
-    box-shadow: 0 .02rem #b1d8f9,
-0 .025rem #b2d8f9,
-0 .03rem .03rem #cfe5f8;
+    box-shadow: 0 .01rem .015rem #b1d8f9,
+0 .015rem .02rem #b2d8f9,
+0 .02rem .025rem #cfe5f8;
 }
 .foot .foot_left a{
     font-size:.18rem;
@@ -162,9 +163,9 @@
     font-size: .18rem;
     font-family:Adobe Heiti Std R;
     color:rgba(255,255,255,1);
-    box-shadow: 0 .02rem #e4c2cc,
-    0 .025rem #e7cbd4,
-    0 .03rem .03rem #ecdfe5;
+    box-shadow: 0 .01rem .015rem #e4c2cc,
+    0 .015rem .02rem #e7cbd4,
+    0 .02rem .025rem #ecdfe5;
 }
 
 

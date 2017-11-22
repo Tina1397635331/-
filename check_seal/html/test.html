@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            for(i=0;i<4;i++){
+                $("#a"+i).click(function(){
+                    $("#img"+i).attr({width:"50",height:"80"});
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<img src="../images/logo2.jpg" id="img1"/>
+<br />
+<button id="a">设置图像的 width 和 height 属性</button>
+<img src="../images/logo2.jpg" id="img2"/>
+<br />
+<button id="a2">设置图像的 width 和 height 属性</button>
+<img src="../images/logo2.jpg" id="img3"/>
+<br />
+<button id="a3">设置图像的 width 和 height 属性</button>
+<img src="../images/logo2.jpg" id="img4"/>
+<br />
+<button id="a4">设置图像的 width 和 height 属性</button>
+</body>
+</html>

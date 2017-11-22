@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*头部start*/
+#head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: .1rem .1rem .1rem .15rem;
+    display: flex;
+    justify-content: space-between;
+}
+#head>div:first-child{
+    width: .25rem;
+    height: .37rem;
+    background: url("../images/pre.png") no-repeat left .075rem;
+    background-size: .22rem .22rem;
+}
+#head>div:nth-child(2){
+    height:.37rem;
+    line-height: .37rem;
+    font-size:.19rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(38,25,21,1);
+}
+
+/*主体内容*/
+#content{
+    background: #f6f6f6;
+    padding-top: .57rem;
+    padding-bottom: .2rem;
+}
+/*car_info*/
+.car_info{
+    margin-top: .1rem;
+    padding: 0 .1rem;
+    background: white;
+}
+.car_info .infra_box{
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem 0;
+    border-bottom: .01rem solid #e3e3e3;
+}
+.car_info .infra_box .infra_left{
+    width: 1rem;
+    font-size: .15rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(162,162,162,1);
+}
+.car_info .infra_box .infra_right{
+    flex: 1;
+    font-size: .15rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(67,74,84,1);
+    text-align: right;
+}
+.car_info .infra_box.last{
+    border-bottom: 0;
+}
+.car_info .infra_box.last .infra_right.last{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

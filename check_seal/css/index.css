@@ -35,43 +35,43 @@
     width: 100%;
     text-align: center;
     position: absolute;
-    margin-top: -.2rem;
+    margin-top: -.35rem;
     z-index:2;
 }
-.silder-ctrl-prev,
-.silder-ctrl-next{
-    position: absolute;
-    top: 0;
-    width: 8%;
-    height: 100%;
-    vertical-align: middle;
-    cursor: pointer;
-    color: #fff;
-    font-family: "宋体";
-    font-size: .52rem;
-    font-weight: 600;
-    text-shadow: #666 .02rem .02rem .05rem;
-}
-.silder-ctrl-prev{
-    left: 0;
-    text-align: left;
-}
-.silder-ctrl-next{
-    right: 0;
-    text-align: right;
-}
-.silder-ctrl-prev>span,
-.silder-ctrl-next>span{
-    position: absolute;
-    top: 50%;
-    margin-top: -.8rem;
-}
-.silder-ctrl-prev>span{
-    left: 0;
-}
-.silder-ctrl-next>span{
-    right: 0;
-}
+/*.silder-ctrl-prev,*/
+/*.silder-ctrl-next{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 8%;*/
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
+    /*cursor: pointer;*/
+    /*color: #fff;*/
+    /*font-family: "宋体";*/
+    /*font-size: .52rem;*/
+    /*!*font-weight: 600;*!*/
+    /*text-shadow: #666 .02rem .02rem .05rem;*/
+/*}*/
+/*.silder-ctrl-prev{*/
+    /*left: 0;*/
+    /*text-align: left;*/
+/*}*/
+/*.silder-ctrl-next{*/
+    /*right: 0;*/
+    /*text-align: right;*/
+/*}*/
+/*.silder-ctrl-prev>span,*/
+/*.silder-ctrl-next>span{*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*margin-top: -.8rem;*/
+/*}*/
+/*.silder-ctrl-prev>span{*/
+    /*left: 0;*/
+/*}*/
+/*.silder-ctrl-next>span{*/
+    /*right: 0;*/
+/*}*/
 .silder-ctrl-con{
     display: inline-block;
     width: 4%;
@@ -86,10 +86,10 @@
     overflow: hidden;
     padding: .05rem 0;
     cursor: pointer;
-    background-color: #e4e4e4;
+    background-color: #fff;
 }
 .silder-ctrl-con.active>span{
-    background-color: #7bbedf;
+    background-color: rgba(255,210,92,1);
 }
 
 @media (max-width: 768px){
@@ -100,10 +100,10 @@
         margin-top: -.25rem;
     }
     .silder-ctrl-con{
-        width: 1.14rem;
+        width: .14rem;
         height: .14rem;
         padding: 0;
-        margin: 0 5.05rem;
+        margin: 0 .05rem;
     }
     .silder-ctrl-con>span{
         display: block;
