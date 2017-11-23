@@ -41,12 +41,22 @@
     border-radius: 50%;
 }
 #head .head_img #login_name{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     height: .29rem;
     line-height: .29rem;
+}
+#head .head_img #login_name>div:first-child{
     font-size: .15rem;
     font-family:PingFangSC-Regular;
     color:rgba(255,255,255,1);
+    margin-right: .05rem;
+}
+#head .head_img #login_name>div:last-child{
+    width: .26rem;
+    height: .26rem;
+    background: url("../images/edit (1).png") no-repeat left .09rem;
+    background-size: .13rem .13rem;
 }
 #head #p_car{
     width: 50%;
@@ -162,7 +172,13 @@
     font-family:PingFangSC-Regular;
     color:rgba(52,52,52,1);
 }
-
+.w_sever{
+    margin: .5rem 0;
+    text-align: center;
+    font-size: .12rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(45,158,255,1);
+}
 
 
 
@@ -174,3 +190,83 @@
     background: url("../images/foot2.png") no-repeat left top;
     background-size: .28rem .28rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*分享*/
+#share_mask{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(99,99,99,.5);
+    z-index: 25;
+}
+#share_mask .share_box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+}
+#share_mask .share_box .share_style{
+    padding: .15rem .2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .01rem solid #e3e3e3;
+}
+#share_mask .share_box .share_style>a{
+    display: block;
+    width: 23%;
+    text-align: center;
+}
+#share_mask .share_box .share_style>a>div:first-child{
+    width: .45rem;
+    height: .45rem;
+    margin: 0 auto;
+}
+#share_mask .share_box .share_style>a:first-child>div:first-child{
+    background: url("../images/share1.png") no-repeat left top;
+    background-size: .45rem .45rem;
+}
+#share_mask .share_box .share_style>a:nth-child(2)>div:first-child{
+    background: url("../images/share2.png") no-repeat left top;
+    background-size: .45rem .45rem;
+}
+#share_mask .share_box .share_style>a:nth-child(3)>div:first-child{
+    background: url("../images/share3.png") no-repeat left top;
+    background-size: .45rem .45rem;
+}
+#share_mask .share_box .share_style>a:last-child>div:first-child{
+    background: url("../images/share4.png") no-repeat left top;
+    background-size: .45rem .45rem;
+}
+#share_mask .share_box .share_style>a>div:last-child{
+    margin-top: .1rem;
+    font-size: .14rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(36,36,36,1);
+}
+#share_mask .share_box .cancel{
+    padding: .14rem 0;
+    text-align: center;
+    font-size:.18rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(45,158,255,1);
+}
+
+

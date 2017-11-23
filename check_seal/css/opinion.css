@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*头部start*/
+#head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: .1rem .1rem .1rem .15rem;
+    display: flex;
+    justify-content: space-between;
+}
+#head>div:first-child{
+    width: .25rem;
+    height: .37rem;
+    background: url("../images/pre.png") no-repeat left .075rem;
+    background-size: .22rem .22rem;
+}
+#head>div:nth-child(2){
+    height:.37rem;
+    line-height: .37rem;
+    font-size:.19rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(38,25,21,1);
+}
+
+/*主体内容*/
+#content{
+    background: #f6f6f6;
+    padding-top: .57rem;
+}
+.opinion_box{
+    margin-top: .1rem;
+    padding: .1rem;
+    background: white;
+}
+.opinion_box textarea{
+    width: 100%;
+    resize: none;
+    font-size: .15rem;
+    color: black;
+    font-family:PingFangSC-Regular;
+    /*color:rgba(174,174,174,1);*/
+}
+　  input,textarea::-webkit-input-placeholder{
+    color:rgba(174,174,174,1);
+    　　}
+　　 input,textarea:-moz-placeholder{
+    color:rgba(174,174,174,1);
+    　　}
+　　 input,textarea::-moz-placeholder{
+    color:rgba(174,174,174,1);
+    　　}
+     input,textarea:-ms-input-placeholder{
+    color:rgba(174,174,174,1);
+    　　}
+
+.tel_in{
+    margin-top: .1rem;
+    background: white;
+    padding: .1rem;
+}
+.tel_in input{
+    width: 100%;
+    height: .3rem;
+    line-height: .3rem;
+    font-size: .15rem;
+    font-family:PingFangSC-Regular;
+    color: black;
+    /*color:rgba(174,174,174,1);*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*sure_add*/
+.sure_add{
+    width: 85%;
+    margin: .4rem auto 0;
+    height: .5rem;
+    line-height: .5rem;
+    background: #2D9EFF;
+    border-radius: .3rem;
+    text-align: center;
+    font-size: .18rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(255,255,255,1);
+    box-shadow: 0 .01rem .01rem #add5f7,
+    0 .015rem .02rem #bbdbf7,
+    0 .02rem .035rem #deebf6,
+    0 .03rem .035rem #e9f1f6;
+}
+
+
+
+
+

@@ -20,70 +20,33 @@
     <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
     <meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
     <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/public_foot.css">
-    <link rel="stylesheet" href="../css/p_c.css">
-    <title>p_c</title>
+    <link rel="stylesheet" href="../css/info_details.css">
+    <title>info_detalis</title>
 </head>
 <body>
+<div id="head">
+    <div></div>
+    <div>资讯详情</div>
+    <div id="share"></div>
+</div>
 <div id="content">
-    <!--头部头像start-->
-    <div id="head">
-        <div class="p_set"><a href="./my_set.html"></a></div>
-        <div class="head_img">
-            <div class="login_img"><a href=""><img src="../images/timg.jpg" alt=""></a></div>
-            <a href="" id="login_name">
-                <div>Tina</div>
-                <div></div>
-            </a>
-        </div>
-        <div id="p_car"><a href="">我的车辆（2）</a></div>
+    <div class="info_title">保险销售面谈前的来年各个准备让您事半功倍前的来年</div>
+    <div class="info_box">
+        <div>车知道小编</div>
+        <div>2017/09/08  18:00</div>
+        <div>浏览量2018</div>
     </div>
-    <!--头部头像end-->
-    <!--我的消息start-->
-        <a href="" class="my_news">
-            <div class="news_left">
-                <div></div>
-                <div>我的消息</div>
-            </div>
-            <div class="news_right">
-                <div>3</div>
-                <div></div>
-            </div>
-        </a>
-    <!--我的消息start-->
-    <!--分享start-->
-    <a href="" class="share one">
-        <div class="share_left">
-            <div></div>
-            <div>我的积分</div>
+    <div class="info_content">
+        <div>在广州车展上，广汽集团携旗下合资、自主6大品牌集体亮相，而其中最受关注的可以说就是广汽传祺和广汽新能源两个品牌。</div>
+        <div> 车展前夕，在“智·享未来——广汽腾讯发布会”上，广汽iSPACE智联电动概念车亮相。车展当天，在2.2展馆广汽传祺展台，广
+汽传祺GM8开启全球首发预售；此外还首发亮相展示了广汽“电动化、网联化、智能化”的技术成果——GE3无人驾驶车。
         </div>
-        <div class="share_right"></div>
-    </a>
-    <a href="#" class="share two" id="share">
-        <div class="share_left" >
-            <div></div>
-            <div>分享给好友</div>
+        <img src="../images/timg.jpg" alt="">
+        <div>在广州车展上，广汽集团携旗下合资、自主6大品牌集体亮相，而其中最受关注的可以说就是广汽传祺和广汽新能源两个品牌。
+            车展前夕，在“智·享未来——广汽腾讯发布会”上，广汽iSPACE智联电动概念车亮相。车展当天，在2.2展馆广汽传祺展台，
+            广汽传祺GM8开启全球首发预售；此外还首发亮相展示了广汽“电动化、网联化、智能化”的技术成果——GE3无人驾驶车。
         </div>
-        <div class="share_right"></div>
-    </a>
-    <a href="./opinion.html" class="share three">
-        <div class="share_left">
-            <div></div>
-            <div>意见反馈</div>
-        </div>
-        <div class="share_right"></div>
-    </a>
-    <a href="./about.html" class="share last">
-        <div class="share_left">
-            <div></div>
-            <div>关于</div>
-        </div>
-        <div class="share_right"></div>
-    </a>
-    <!--分享end-->
-    <!--微信客服start-->
-    <div class="w_sever">微信客服：CZDAPP</div>
-    <!--微信客服end-->
+    </div>
 </div>
 <!--底部导航-->
 <div id="foot_nav">
@@ -95,17 +58,15 @@
         <div></div>
         <div>车圈</div>
     </a>
-    <a href="./welfare.html">
+    <a href="" class="active">
         <div></div>
         <div>福利</div>
     </a>
-    <a href="./p_c.html" class="active">
+    <a href="">
         <div></div>
         <div>我的</div>
     </a>
 </div>
-
-
 <div id="share_mask">
     <div class="share_box">
         <div class="share_style">
@@ -134,11 +95,12 @@
     $(function () {
         $("#share").click(function () {
             $("#share_mask").css("display","block");
-        });
+        })
         $(".cancel").click(function () {
             $("#share_mask").css("display","none");
         })
     })
 </script>
+
 </body>
 </html>

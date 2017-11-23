@@ -33,7 +33,7 @@
     <!--头部轮播图start-->
     <div class="js-silder">
         <div class="silder-scroll">
-            <div class="silder-main">
+            <div class="silder-main" id="run_img">
                 <div class="silder-main-img">
                     <img src="../images/run.jpg" alt="">
                 </div>
@@ -175,22 +175,19 @@
 
 <script>
     $(function (){
-
-
-//        var li = '<a href="" class="car_box"><div class="car_title">长安汽车轿车销售事业部副总经理隋全晖：香格里拉计划是未来主调</div>';
-//        li += '<div class="car_show"><div><img src="../images/car1.jpg" alt=""></div><div><img src="../images/car2.jpg" alt=""></div>';
-//        li += '<div><img src="../images/car3.jpg" alt=""></div></div></a>';
-//        for(var i = 0;i<5;i++){
-//            $("#box").append(li);
-//        }
-//        var showContent = ["长安汽车轿车销售事业部副总经理隋全晖：","9999"];
-////        var carShows = $("#car_shows");
-//        for(i = 0;i <= showContent.length;i++){
-//            $("#car_shows").html(showContent[i]);
-//        }
-
-
-
+/*
+ //        var li = '<a href="" class="car_box"><div class="car_title">长安汽车轿车销售事业部副总经理隋全晖：香格里拉计划是未来主调</div>';
+ //        li += '<div class="car_show"><div><img src="../images/car1.jpg" alt=""></div><div><img src="../images/car2.jpg" alt=""></div>';
+ //        li += '<div><img src="../images/car3.jpg" alt=""></div></div></a>';
+ //        for(var i = 0;i<5;i++){
+ //            $("#box").append(li);
+ //        }
+ //        var showContent = ["长安汽车轿车销售事业部副总经理隋全晖：","9999"];
+ ////        var carShows = $("#car_shows");
+ //        for(i = 0;i <= showContent.length;i++){
+ //            $("#car_shows").html(showContent[i]);
+ //        }
+*/
         $(".js-silder").silder({
             auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
             speed: 25,//轮播图运动速度
@@ -207,38 +204,49 @@
         })
     });
 
-
-    function SavePara() {
-        var parameter = {};
-        $("#info_car").each(function () {
-            var key = $(this).attr("id");
-            var value = $(this).val();
-            parameter[key] = value;
-        });
+/*
+         //        var parameter = {};
+         //        $("#run_img").each(function () {
+         //            var key = $(this).attr("id");
+         //            var value = $(this).val();
+         //            parameter[key] = value;
+         //        });
+        */
         $.ajax({
-            url: 'http://192.168.1.5',
+            url: 'http://doclever.cn:8090/mock/5a164f336e367a22c06848e3/main/pics',
             type: "GET",
-            dataType: 'jsonp',
+            dataType: 'json',
             data: {name:"ZhangHuihua"},
             timeout: 5000,
             success: function (json) {
-                //客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
-                alert(json);
-                $("#info_car").html('');
-                //eval将字符串转成对象数组
-                //var json = { "id": "10086", "uname": "zhangsan", "email": "zhangsan@qq.com" };
-                //json = eval(json);
-                //alert("===json:id=" + json.id + ",uname=" + json.uname + ",email=" + json.email);
+ /*
+                 //客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+                 //                alert(json);
+                 //                $("#run_img .silder-main-img img").html('');
+                 //eval将字符串转成对象数组
+                 //var json = { "id": "10086", "uname": "zhangsan", "email": "zhangsan@qq.com" };
+                 //json = eval(json);
+                 //alert("===json:id=" + json.id + ",uname=" + json.uname + ",email=" + json.email);
 
-                var json = eval(tt); //数组
-                $.each(json, function (index, item) {
-                    //循环获取数据
-                    var Key = json[index].key;
-                    var Info = json[index].info;
-                    //                 var idnumber = json[index].IdNumber;
-                    //                 var sex = json[index].Sex;
-                    $("#info_car").html($("#info_car").html() + "<br>" + Key + "--" + Info.name); //+ " - " + idnumber + " - " + sex + "<br/>");
-                });
+                 //                var json = eval(tt); //数组
+
+                */
+                if (json.ret <= 0)
+                    console.log(json.msg)
+                else {
+                    $.each(json, function (index, item) {
+                        /*
+                         //循环获取数据
+                         //                    var Key = json[index].key;
+                         //                    var Info = json[index].info;
+                         //                 var idnumber = json[index].IdNumber;
+                         //                 var sex = json[index].Sex;
+                         //                    $("#run_img").html($("#info_car").html() + "<br>" + Key + "--" + Info.name); //+ " - " + idnumber + " - " + sex + "<br/>");
+                         */
+                        $("#run_img").append($('<div class="silder-main-img">+<img src="+item+" alt=""/>+</div>'));
+                        console.log(item)
+                    });
+                }
             },
             error: function (){
                 alert("请求失败！");
@@ -248,11 +256,6 @@
 //        $.getJSON("http://localhost:8080/test2/searchJSONResult.action?name1=ZhangHuihua&callback=?",
 //                function(json){ // 执行代码
 //                });
-    };
-
-
-
-
 // /* 获取请求的各个参数(用户名等) */
 //    Map map = request.getParameterMap();
 //    /* 获取jsonp的回调函数名 */

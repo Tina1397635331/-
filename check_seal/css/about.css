@@ -1,0 +1,99 @@
+@charset "utf-8";
+/*头部start*/
+#head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: .1rem .1rem .1rem .15rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .01rem solid #e3e3e3;
+}
+#head>div:first-child{
+    width: .25rem;
+    height: .37rem;
+    background: url("../images/pre.png") no-repeat left .075rem;
+    background-size: .22rem .22rem;
+}
+#head>div:nth-child(2){
+    height:.37rem;
+    line-height: .37rem;
+    font-size:.19rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(38,25,21,1);
+}
+
+/*主体内容*/
+#content{
+    background: #fff;
+    padding: .57rem .1rem .3rem .1rem;
+}
+/*logo*/
+.about_logo{
+    padding: .2rem 0;
+    text-align: center;
+}
+.about_logo img{
+    width: .6rem;
+    height: .6rem;
+    vertical-align: middle;
+}
+.about_logo div{
+    margin-top: .1rem;
+    font-size: .13rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(45,158,255,1);
+}
+
+
+/*about_info*/
+.about_info{
+    text-indent: 2em;
+    font-size: .14rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(36,36,36,1);
+}
+.feature .feature_title{
+    margin-top: .15rem;
+    font-size: .16rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(45,158,255,1);
+}
+.feature .solf_f{
+    margin-top: .15rem;
+}
+.feature .solf_f>div{
+    margin-top: .03rem;
+    font-size: .14rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(36,36,36,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*头部start*/
+#head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: .1rem .1rem .1rem .15rem;
+    display: flex;
+    justify-content: space-between;
+}
+#head>div:first-child{
+    width: .25rem;
+    height: .37rem;
+    background: url("../images/pre.png") no-repeat left .075rem;
+    background-size: .22rem .22rem;
+}
+#head>div:nth-child(2){
+    height:.37rem;
+    line-height: .37rem;
+    font-size:.19rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(38,25,21,1);
+}
+
+/*主体内容*/
+#content{
+    background: #f6f6f6;
+    padding-top: .57rem;
+}
+.p_name{
+    margin-top: .1rem;
+    width: 100%;
+    padding: .1rem 0;
+    background: white;
+}
+.p_name input{
+    width: 94%;
+    height: .3rem;
+    line-height: .3rem;
+    padding: 0 .1rem;
+    font-size: .15rem;
+    color: black;
+    font-family:PingFangSC-Regular;
+}
+　  input::-webkit-input-placeholder{
+        color:rgba(174,174,174,1);
+    　　}
+　　 input:-moz-placeholder{
+        color:rgba(174,174,174,1);
+    　　}
+　　 input::-moz-placeholder{
+        color:rgba(174,174,174,1);
+    　　}
+    input:-ms-input-placeholder{
+        color:rgba(174,174,174,1);
+    　　}
+
+
+
+
+
+

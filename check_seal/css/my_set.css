@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*头部start*/
+#head{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: .1rem .1rem .1rem .15rem;
+    display: flex;
+    justify-content: space-between;
+}
+#head>div:first-child{
+    width: .25rem;
+    height: .37rem;
+    background: url("../images/pre.png") no-repeat left .075rem;
+    background-size: .22rem .22rem;
+}
+#head>div:nth-child(2){
+    height:.37rem;
+    line-height: .37rem;
+    font-size:.19rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(38,25,21,1);
+}
+
+/*主体内容*/
+#content{
+    background: #f6f6f6;
+    padding-top: .57rem;
+}
+
+.set_box{
+    display: flex;
+    justify-content: space-between;
+    padding: .15rem;
+    background: white;
+
+}
+.set_box .set_left{
+    font-size: .15rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(52,52,52,1);
+}
+.set_box .set_right{
+    font-size: .15rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(174,174,174,1);
+}
+.set_box.one{
+    margin-top: .1rem;
+    border-bottom: .01rem solid #e3e3e3;
+}
+.chk_3{
+    display: none;
+}
+.chk_3 + label {
+    background-color: #fafbfa;
+    padding: .04rem;
+    border-radius: .5rem;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    width: .3rem;
+    height: .15rem;
+}
+
+.chk_3  + label:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    -webkit-transition: box-shadow 0.1s ease-in;
+    transition: box-shadow 0.1s ease-in;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0,0,0,0.4);
+}
+
+.chk_3  + label:before {
+    content: ' ';
+    position: absolute;
+    background: white;
+    top: .01rem;
+    left: .01rem;
+    z-index: 999999;
+    width: .21rem;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    height: .21rem;
+    border-radius: 1rem;
+    box-shadow: 0 .03rem .01rem rgba(0,0,0,0.05), 0 0 .01rem rgba(0,0,0,0.3);
+}
+
+.chk_3:active + label:after {
+    box-shadow: inset 0 0 0 .2rem #eee, 0 0 .01rem #eee;
+}
+
+.chk_3:active + label:before {
+    width: .37rem;
+}
+
+.chk_3:checked:active + label:before {
+    width: .37rem;
+    left: .2rem;
+}
+
+.chk_3  + label:active {
+    box-shadow: 0 .01rem .02rem rgba(0,0,0,0.05), inset 0 .01rem .03rem rgba(0,0,0,0.1);
+}
+
+.chk_3:checked + label:before {
+    content: ' ';
+    position: absolute;
+    left: .17rem;
+    border-radius: 1rem;
+}
+
+.chk_3:checked + label:after {
+    content: ' ';
+    font-size: 1em;
+    position: absolute;
+    background: #2D9EFF;
+    box-shadow: 0 0 .01rem #2D9EFF;
+}
+
