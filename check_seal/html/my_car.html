@@ -32,8 +32,8 @@
 </div>
 <!--主体内容-->
 <div id="content">
-    <div class="check_show">
-        <div class="delete_car"></div>
+    <div class="check_show" id="my_car">
+        <div class="delete_car" id="delete"></div>
         <div class="check_">
             <div>桂90321</div>
             <div><a href="">查违章</a></div>
@@ -47,5 +47,29 @@
         </a>
     </div>
 </div>
+<div class="delete_mask" id="delete_b">
+    <div class="delete_box">
+        <div class="delete_title">确定删除桂A864BE车辆吗？</div>
+        <div class="select_box">
+            <div id="cancel">取消</div>
+            <div id="sure">确定</div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.3.min.js"></script>
+<script>
+    $(function () {
+        $("#delete").click(function () {
+            $("#delete_b").css("display","block")
+        });
+        $("#cancel").click(function () {
+            $("#delete_b").css("display","none")
+        })
+        $("#sure").click(function () {
+            $("#delete_b").css("display","none");
+            $("#my_car").remove()
+        })
+    })
+</script>
 </body>
 </html>

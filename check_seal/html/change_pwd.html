@@ -20,61 +20,50 @@
     <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
     <meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
     <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/m_login.css">
-    <title>m_login</title>
+    <link rel="stylesheet" href="../css/m_register.css">
+    <title>change_password</title>
+    <style>
+        .car_info .car_num .car_left{
+            width: .32rem;
+            height: .35rem;
+            background: url("../images/tel5.png") no-repeat left .06rem;
+            background-size: .21rem .21rem;
+        }
+        .car_info .car_nums .car_left{
+            width: .32rem;
+            height: .35rem;
+            background: url("../images/tel5.png") no-repeat left .06rem;
+            background-size: .21rem .21rem;
+        }
+    </style>
 </head>
 <body>
 <!--头部-->
 <div id="head">
     <div></div>
-    <div>手机号登录</div>
+    <div>修改密码</div>
     <div></div>
 </div>
 <!--主体内容-->
 <div id="content">
-    <div class="about_logo">
-        <img src="../images/logo2.jpg" alt="">
-        <div>查违章 &nbsp;车知道</div>
+    <!--协议-->
+    <div class="login_pact">
+        <div></div>
+        <div><input type="text" placeholder="当前密码"></div>
     </div>
     <div class="car_info">
         <div class="car_num">
             <div class="car_left"></div>
-            <div class="car_in"><input type="tel" placeholder="手机号"></div>
+            <div class="car_in"><input type="password" placeholder="设置6-20位密码"></div>
         </div>
         <div class="car_nums">
             <div class="car_left"></div>
-            <div class="car_in"><input type="password" placeholder="密码" id="password"></div>
-            <div class="car_code" id="passwordeye"></div>
+            <div class="car_in"><input type="password" placeholder="再次确认密码"></div>
         </div>
     </div>
-
-<!--协议-->
-<div class="login_pact">
-    <div class="pact_left"><a href="index.html">忘记密码？</a></div>
-    <div class="pact_right"><a href="m_register.html">注册</a></div>
-</div>
     <div class="sure_add">
-        <a href="">登录</a>
+        完成
     </div>
 </div>
-<script src="../js/jquery-2.1.3.min.js"></script>
-<script>
-    $(function () {
-        function switchPwd() {
-            var passwordeye = $('#passwordeye');
-            var showPwd = $("#password");
-            passwordeye.off('click').on('click',function(){
-                if(passwordeye.hasClass('car_code')){
-                    passwordeye.removeClass('car_code').addClass('select_see');//密码可见
-                    showPwd.prop('type','text');
-                }else{
-                    passwordeye.removeClass('select_see').addClass('car_code');//密码不可见
-                    showPwd.prop('type','password');
-                };
-            });
-        }
-        switchPwd();
-    })
-</script>
 </body>
 </html>

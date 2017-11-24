@@ -35,19 +35,19 @@
         <div class="silder-scroll">
             <div class="silder-main" id="run_img">
                 <div class="silder-main-img">
-                    <img src="../images/run.jpg" alt="">
+                    <img src="https://dummyimage.com/600x400/856" alt="">
                 </div>
                 <div class="silder-main-img">
-                    <img src="../images/run.jpg" alt="">
+                    <img src="https://dummyimage.com/1000x1400/752" alt="">
                 </div>
                 <div class="silder-main-img">
-                    <img src="../images/run.jpg" alt="">
+                    <img src="https://dummyimage.com/600x400/989" alt="">
                 </div>
-                    <img src="../images/run.jpg" alt="">
-                </div>
+                <img src="https://dummyimage.com/600x400/367" alt="">
             </div>
-        <!--<div class="js-silder-ctrl"></div>-->
         </div>
+        <div class="js-silder-ctrl"></div>
+    </div>
 
     <!--头部轮播图end-->
     <!--头部导航start-->
@@ -98,12 +98,12 @@
         <div class="car_head">汽车资讯</div>
         <!--资讯content-->
         <!--<a href="" class="car_box">-->
-            <!--<div class="car_title" id="car_shows">{{content}}</div>-->
-            <!--<div class="car_show">-->
-                <!--<div><img src="{{src}}" alt=""></div>-->
-                <!--<div><img src="{{src}}" alt=""></div>-->
-                <!--<div><img src="{{src}}" alt=""></div>-->
-            <!--</div>-->
+        <!--<div class="car_title" id="car_shows">{{content}}</div>-->
+        <!--<div class="car_show">-->
+        <!--<div><img src="{{src}}" alt=""></div>-->
+        <!--<div><img src="{{src}}" alt=""></div>-->
+        <!--<div><img src="{{src}}" alt=""></div>-->
+        <!--</div>-->
         <!--</a>-->
 
 
@@ -169,32 +169,34 @@
         <div class="login_pact">登录即视同意 <a href="">《用户服务协议》</a></div>
     </div>
 </div>
-<!--<script src="../js/jquery.min.js"></script>-->
-<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<script src="../js/jquery-2.1.3.min.js"></script>
 <script src="../js/wySilder.js" type="text/javascript"></script>
 
 <script>
     $(function (){
-/*
- //        var li = '<a href="" class="car_box"><div class="car_title">长安汽车轿车销售事业部副总经理隋全晖：香格里拉计划是未来主调</div>';
- //        li += '<div class="car_show"><div><img src="../images/car1.jpg" alt=""></div><div><img src="../images/car2.jpg" alt=""></div>';
- //        li += '<div><img src="../images/car3.jpg" alt=""></div></div></a>';
- //        for(var i = 0;i<5;i++){
- //            $("#box").append(li);
- //        }
- //        var showContent = ["长安汽车轿车销售事业部副总经理隋全晖：","9999"];
- ////        var carShows = $("#car_shows");
- //        for(i = 0;i <= showContent.length;i++){
- //            $("#car_shows").html(showContent[i]);
- //        }
-*/
+        /*
+         //        var li = '<a href="" class="car_box"><div class="car_title">长安汽车轿车销售事业部副总经理隋全晖：香格里拉计划是未来主调</div>';
+         //        li += '<div class="car_show"><div><img src="../images/car1.jpg" alt=""></div><div><img src="../images/car2.jpg" alt=""></div>';
+         //        li += '<div><img src="../images/car3.jpg" alt=""></div></div></a>';
+         //        for(var i = 0;i<5;i++){
+         //            $("#box").append(li);
+         //        }
+         //        var showContent = ["长安汽车轿车销售事业部副总经理隋全晖：","9999"];
+         ////        var carShows = $("#car_shows");
+         //        for(i = 0;i <= showContent.length;i++){
+         //            $("#car_shows").html(showContent[i]);
+         //        }
+         */
         $(".js-silder").silder({
             auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
             speed: 25,//轮播图运动速度
             sideCtrl: false,//是否需要侧边控制按钮
             defaultView: 0,//默认显示的索引
             interval: 3000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
-            activeClass: "active"//小的控制按钮激活的样式，不包括作用两边，默认active
+            activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，
+            observer:true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents:true,//修改swiper的父元素时，自动初始化swiper
         });
         $("#click_add").click(function () {
             $("#login_mask").css("display","block")
@@ -203,23 +205,24 @@
             $("#login_mask").css("display","none")
         })
     });
-
-/*
-         //        var parameter = {};
-         //        $("#run_img").each(function () {
-         //            var key = $(this).attr("id");
-         //            var value = $(this).val();
-         //            parameter[key] = value;
-         //        });
-        */
+    /*
+     //        var parameter = {};
+     //        $("#run_img").each(function () {
+     //            var key = $(this).attr("id");
+     //            var value = $(this).val();
+     //            parameter[key] = value;
+     //        });
+     */
+    function run_img() {
         $.ajax({
             url: 'http://doclever.cn:8090/mock/5a164f336e367a22c06848e3/main/pics',
             type: "GET",
             dataType: 'json',
-            data: {name:"ZhangHuihua"},
+            touchAngle : 10,
+            data: {name:"1"},
             timeout: 5000,
             success: function (json) {
- /*
+                /*
                  //客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
                  //                alert(json);
                  //                $("#run_img .silder-main-img img").html('');
@@ -230,11 +233,12 @@
 
                  //                var json = eval(tt); //数组
 
-                */
-                if (json.ret <= 0)
+                 */
+                if (json.data.list.length <= 0){
                     console.log(json.msg)
-                else {
-                    $.each(json, function (index, item) {
+                }else {
+                    $("#run_img").empty();//如果想保留原来页面上的固定图片就屏掉。
+                    $.each(json.data.list, function (index, item) {
                         /*
                          //循环获取数据
                          //                    var Key = json[index].key;
@@ -243,9 +247,12 @@
                          //                 var sex = json[index].Sex;
                          //                    $("#run_img").html($("#info_car").html() + "<br>" + Key + "--" + Info.name); //+ " - " + idnumber + " - " + sex + "<br/>");
                          */
-                        $("#run_img").append($('<div class="silder-main-img">+<img src="+item+" alt=""/>+</div>'));
-                        console.log(item)
+                        $("#run_img").append('<div class="silder-main-img"><img src="'+json.data.list[index]+'" alt=""></div>');
+                        console.log(json.data.list[item])
                     });
+//                    for(var i = 0;i<json.data.list.length;i++){
+//                        $("#run_img").append('<div class="silder-main-img"><img src="'+json.data.list[i]+'" alt=""></div>');
+//                    }
                 }
             },
             error: function (){
@@ -265,6 +272,8 @@
 //    /* 重新拼接格式，并输出  */
 //    out.println(callback + "('" + msg + "')");
 
+    }
+    run_img();
 </script>
 </body>
 </html>

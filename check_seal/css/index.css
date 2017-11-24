@@ -29,6 +29,8 @@
     width: 100%;
 }
 .silder-main-img img{
+    height: 2.5rem;
+    vertical-align: middle;
     width: 100%;
 }
 .js-silder-ctrl{
@@ -38,40 +40,40 @@
     margin-top: -.35rem;
     z-index:2;
 }
-/*.silder-ctrl-prev,*/
-/*.silder-ctrl-next{*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*width: 8%;*/
-    /*height: 100%;*/
-    /*vertical-align: middle;*/
-    /*cursor: pointer;*/
-    /*color: #fff;*/
-    /*font-family: "宋体";*/
-    /*font-size: .52rem;*/
-    /*!*font-weight: 600;*!*/
-    /*text-shadow: #666 .02rem .02rem .05rem;*/
-/*}*/
-/*.silder-ctrl-prev{*/
-    /*left: 0;*/
-    /*text-align: left;*/
-/*}*/
-/*.silder-ctrl-next{*/
-    /*right: 0;*/
-    /*text-align: right;*/
-/*}*/
-/*.silder-ctrl-prev>span,*/
-/*.silder-ctrl-next>span{*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*margin-top: -.8rem;*/
-/*}*/
-/*.silder-ctrl-prev>span{*/
-    /*left: 0;*/
-/*}*/
-/*.silder-ctrl-next>span{*/
-    /*right: 0;*/
-/*}*/
+.silder-ctrl-prev,
+.silder-ctrl-next{
+    position: absolute;
+    top: 0;
+    width: 8%;
+    height: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    font-family: "宋体";
+    font-size: .52rem;
+    /*font-weight: 600;*/
+    text-shadow: #666 .02rem .02rem .05rem;
+}
+.silder-ctrl-prev{
+    left: 0;
+    text-align: left;
+}
+.silder-ctrl-next{
+    right: 0;
+    text-align: right;
+}
+.silder-ctrl-prev>span,
+.silder-ctrl-next>span{
+    position: absolute;
+    top: 50%;
+    margin-top: -.8rem;
+}
+.silder-ctrl-prev>span{
+    left: 0;
+}
+.silder-ctrl-next>span{
+    right: 0;
+}
 .silder-ctrl-con{
     display: inline-block;
     width: 4%;
@@ -251,7 +253,7 @@
 
 /*汽车资讯*/
 .car_info{
-    padding: .1rem 0;
+    padding: .05rem 0;
     position: relative;
 }
 .car_info .car_head{

@@ -20,22 +20,18 @@
     <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
     <meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
     <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/m_login.css">
-    <title>m_login</title>
+    <link rel="stylesheet" href="../css/m_register.css">
+    <title>m_register</title>
 </head>
 <body>
 <!--头部-->
 <div id="head">
     <div></div>
-    <div>手机号登录</div>
+    <div>手机号注册</div>
     <div></div>
 </div>
 <!--主体内容-->
 <div id="content">
-    <div class="about_logo">
-        <img src="../images/logo2.jpg" alt="">
-        <div>查违章 &nbsp;车知道</div>
-    </div>
     <div class="car_info">
         <div class="car_num">
             <div class="car_left"></div>
@@ -43,38 +39,53 @@
         </div>
         <div class="car_nums">
             <div class="car_left"></div>
-            <div class="car_in"><input type="password" placeholder="密码" id="password"></div>
-            <div class="car_code" id="passwordeye"></div>
+            <div class="car_in"><input type="text" placeholder="手机验证码"></div>
+            <div class="car_code">获取验证码</div>
         </div>
     </div>
 
 <!--协议-->
 <div class="login_pact">
-    <div class="pact_left"><a href="index.html">忘记密码？</a></div>
-    <div class="pact_right"><a href="m_register.html">注册</a></div>
+    <div></div>
+    <div class="password"><input type="password" placeholder="设置6-20位密码"></div>
 </div>
-    <div class="sure_add">
-        <a href="">登录</a>
+    <div class="sure_add" id="submit">
+        完成
     </div>
 </div>
 <script src="../js/jquery-2.1.3.min.js"></script>
 <script>
     $(function () {
-        function switchPwd() {
-            var passwordeye = $('#passwordeye');
-            var showPwd = $("#password");
-            passwordeye.off('click').on('click',function(){
-                if(passwordeye.hasClass('car_code')){
-                    passwordeye.removeClass('car_code').addClass('select_see');//密码可见
-                    showPwd.prop('type','text');
-                }else{
-                    passwordeye.removeClass('select_see').addClass('car_code');//密码不可见
-                    showPwd.prop('type','password');
-                };
-            });
-        }
-        switchPwd();
+        $('#submit').on('click',function(){;
+            var   boolpwd = $('.login_pact .password input')[0].value.length >= 6 ;
+//            var boolpwd1 = $('.car_in input')[1].value == $('.car_in input')[2].value;
+            var boolpwd1 = $('.login_pact .password input')[0].value;
+            var retel =/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/g;
+            var booltel = retel.test($('.car_num .car_in input')[0].value);
+            //这里应该嵌套使if的,但是不是实际开发,这么写便于代码观看
+            if(!boolpwd){
+                console.log('pwd:不能少于6位');
+            }
+            if(!booltel){
+                console.log('tel:请输入正确的电话号');
+            }
+            if(boolpwd&&booltel){
+                $.ajax({
+                    type:"get",
+                    url:"http://doclever.cn:8090/mock/5a164f336e367a22c06848e3/register",
+                    async:true,
+                    data:{
+                        pwd:$('.login_pact .password input')[0].value,
+                        tel:$('.car_num .car_in input')[0].value
+                    },
+                    success : function(data){
+                        console.log(data);
+                    }
+                });
+            }
+        })
     })
+
 </script>
 </body>
 </html>

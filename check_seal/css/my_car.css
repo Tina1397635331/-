@@ -132,3 +132,61 @@
 }
 
 
+
+/*delete_mask*/
+.delete_mask{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(99,99,99,.5);
+    z-index: 20;
+}
+.delete_mask .delete_box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-radius: .05rem;
+}
+.delete_mask .delete_box .delete_title{
+    text-align: center;
+    margin: .45rem 0;
+    font-size: .18rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(36,36,36,1);
+}
+.delete_mask .delete_box .select_box{
+    border-top: .01rem solid #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+}
+.delete_mask .delete_box .select_box>div{
+    flex: 1;
+    padding: .1rem 0;
+    text-align: center;
+    font-size: .18rem;
+    font-family:PingFangSC-Regular;
+    color:rgba(36,36,36,1);
+}
+.delete_mask .delete_box .select_box>div:first-child{
+    color:rgba(45,158,255,1);
+    border-right: .01rem solid #e3e3e3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -42,7 +42,7 @@
 }
 /*主体内容*/
 #content{
-    background: #fff;
+    background: #f6f6f6;
     padding-top: .57rem;
 }
 /*手机号*/
@@ -60,8 +60,8 @@
 .car_info .car_num .car_left{
     width: .31rem;
     height: .35rem;
-    background: url("../images/tel2.png") no-repeat .02rem .07rem;
-    background-size: .2rem .22rem;
+    background: url("../images/mobeils.png") no-repeat .02rem .07rem;
+    background-size: .155rem .22rem;
 }
 .car_info .car_num .car_in{
     flex: 1;
@@ -80,7 +80,6 @@
     padding-top: .02rem;
 }
 　  input::-webkit-input-placeholder{
-         font-size: .15rem;
         color:rgba(223,223,223,1);
     　　}
 　　 input:-moz-placeholder{
@@ -96,12 +95,11 @@
     display: flex;
     justify-content: flex-start;
     padding: .1rem .12rem .1rem 0;
-    border-bottom: .01rem solid #e3e3e3;
 }
 .car_info .car_nums .car_left{
     width: .32rem;
     height: .35rem;
-    background: url("../images/tel1.png") no-repeat left .08rem;
+    background: url("../images/code (1).png") no-repeat left .08rem;
     background-size: .21rem .21rem;
 }
 .car_info .car_nums .car_in{
@@ -120,30 +118,38 @@
 .car_info .car_nums .car_code{
     height: .35rem;
     line-height:.35rem;
-    width: 10%;
-    background: url("../images/tel3.png") no-repeat left .1rem;
-    background-size: .35rem .25rem;
+    width: 27%;
+    font-size: .15rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(45,158,255,1);
+    text-align: center;
 }
 
-.select_see{
-    height: .35rem;
-    line-height:.35rem;
-    width: 10%;
-    background: url("../images/tel4.png") no-repeat left .08rem;
-    background-size: .35rem .27rem;
-}
+
 
 /*login_pact*/
 .login_pact{
-    padding: .15rem;
+    padding: .1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    background: white;
+    margin-top: .1rem;
 }
-.login_pact>div a{
-    display: block;
-    font-size: .14rem;
+.login_pact>div:first-child{
+    width: .32rem;
+    height: .35rem;
+    background: url("../images/tel5.png") no-repeat left .06rem;
+    background-size: .21rem .21rem;
+}
+.login_pact>div:last-child input{
+    width: 100%;
+    height: .35rem;
+    line-height: .35rem;
+    font-size: .15rem;
     font-family:PingFangSC-Regular;
-    color:rgba(154,154,154,1);
+    color: black;
+    border: 0 none;
+    padding-right: .1rem;
 }
 
 
@@ -160,17 +166,16 @@
     background: #2D9EFF;
     border-radius: .3rem;
     text-align: center;
-    box-shadow: .01rem .01rem .01rem #add5f7,
-    .015rem .015rem .02rem #bbdbf7,
+    font-size: .18rem;
+    font-family:Adobe Heiti Std R;
+    color:rgba(255,255,255,1);
+    box-shadow: 0 .01rem .01rem #add5f7,
+    0 .015rem .02rem #bbdbf7,
     0 .02rem .03rem #deebf6,
     0 .03rem .035rem #e9f1f6;
 }
 
-.sure_add a{
-    font-size: .18rem;
-    font-family:Adobe Heiti Std R;
-    color:rgba(255,255,255,1);
-}
+
 
 
 
